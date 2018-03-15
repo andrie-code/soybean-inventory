@@ -47,6 +47,38 @@ LOCK TABLES `giro` WRITE;
 UNLOCK TABLES;
 
 --
+-- Table structure for table `giro_list`
+--
+
+DROP TABLE IF EXISTS `giro_list`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `giro_list` (
+  `id` int(11) NOT NULL,
+  `tanggal` datetime DEFAULT NULL,
+  `no_giro` varchar(15) DEFAULT NULL,
+  `bank` varchar(15) DEFAULT NULL,
+  `perusahaan` varchar(15) DEFAULT NULL,
+  `jumlah` decimal(11,2) DEFAULT NULL,
+  `status` varchar(15) DEFAULT NULL,
+  `jatuh_tempo` datetime DEFAULT NULL,
+  `tgl_cair` datetime DEFAULT NULL,
+  `jumlah_Cair` decimal(11,2) DEFAULT NULL,
+  `balance` decimal(11,2) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `giro_list`
+--
+
+LOCK TABLES `giro_list` WRITE;
+/*!40000 ALTER TABLE `giro_list` DISABLE KEYS */;
+/*!40000 ALTER TABLE `giro_list` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `soybean`
 --
 
@@ -108,4 +140,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-03-06 15:15:53
+-- Dump completed on 2018-03-15 18:59:30
