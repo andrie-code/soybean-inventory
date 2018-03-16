@@ -16,6 +16,39 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
+-- Table structure for table `billings`
+--
+
+DROP TABLE IF EXISTS `billings`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `billings` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `tanggal` datetime DEFAULT NULL,
+  `invoice` varchar(15) DEFAULT NULL,
+  `perusahaan` varchar(15) DEFAULT NULL,
+  `produk` varchar(15) DEFAULT NULL,
+  `tonase` int(10) DEFAULT NULL,
+  `harga` decimal(10,2) DEFAULT NULL,
+  `total` decimal(15,2) DEFAULT NULL,
+  `status` varchar(15) DEFAULT NULL,
+  `pembayaran` decimal(15,2) DEFAULT NULL,
+  `tgl` datetime DEFAULT NULL,
+  `balance` decimal(15,2) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `billings`
+--
+
+LOCK TABLES `billings` WRITE;
+/*!40000 ALTER TABLE `billings` DISABLE KEYS */;
+/*!40000 ALTER TABLE `billings` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `giro`
 --
 
@@ -140,4 +173,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-03-15 18:59:30
+-- Dump completed on 2018-03-16 18:43:09
