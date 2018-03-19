@@ -112,6 +112,42 @@ LOCK TABLES `giro_list` WRITE;
 UNLOCK TABLES;
 
 --
+-- Table structure for table `sales_list`
+--
+
+DROP TABLE IF EXISTS `sales_list`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `sales_list` (
+  `no` int(11) NOT NULL AUTO_INCREMENT,
+  `jenis_sales` varchar(15) DEFAULT NULL,
+  `barang` varchar(30) DEFAULT NULL,
+  `invoice` int(11) DEFAULT NULL,
+  `customer` varchar(30) DEFAULT NULL,
+  `harga` decimal(11,2) DEFAULT NULL,
+  `tonase` int(11) DEFAULT NULL,
+  `total` decimal(15,2) DEFAULT NULL,
+  `status` varchar(15) DEFAULT NULL,
+  `bank` varchar(15) DEFAULT NULL,
+  `pembayaran` decimal(15,2) DEFAULT NULL,
+  `tgl_bayar` datetime DEFAULT NULL,
+  `tgl_kirim` datetime DEFAULT NULL,
+  `truk` varchar(30) DEFAULT NULL,
+  `balance` decimal(15,2) DEFAULT NULL,
+  PRIMARY KEY (`no`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `sales_list`
+--
+
+LOCK TABLES `sales_list` WRITE;
+/*!40000 ALTER TABLE `sales_list` DISABLE KEYS */;
+/*!40000 ALTER TABLE `sales_list` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `soybean`
 --
 
@@ -173,4 +209,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-03-16 18:43:09
+-- Dump completed on 2018-03-19 13:59:17
